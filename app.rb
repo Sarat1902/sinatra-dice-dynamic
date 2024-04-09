@@ -55,9 +55,12 @@ end
 
 
 get("/dynamic/:number_of_dice/6") do
+  
+  @number_of_dice = params.fetch("number_of_dice").to_i
+  
   @rolls = []
 
-  50.times do
+  @number_of_dice.times do
     die = rand(1..6)
 
     @rolls.push(die)
