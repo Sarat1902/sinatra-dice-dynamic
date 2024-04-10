@@ -54,7 +54,7 @@ get("/dice/5/4") do
 end
 
 
-get("/dynamic/:number_of_dice/:how_many_sides") do
+get("/dice/:number_of_dice/:how_many_sides") do
   
   @number_of_dice = params.fetch("number_of_dice").to_i
   @how_many_sides = params.fetch("how_many_sides").to_i
